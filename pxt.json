@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
-        "XRBIT": "github:xiaorgeek/xrbit#ff8cc28ab3ca1ee81f9bc7543591de59dbd34b8f"
+        "XRBIT": "github:xiaorgeek/xrbit#ff8cc28ab3ca1ee81f9bc7543591de59dbd34b8f",
+        "XRBIT-ds_ownTest": "github:szucskar/xrbit-ds_en#70c6562c7a5ac39771157cb998e9f7fdd54934eb"
     },
     "files": [
         "main.blocks",
@@ -18,5 +19,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
