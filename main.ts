@@ -256,3 +256,18 @@ namespace XRbit_Trolley {
         return irread;
     }
 }
+basic.showString("GO")
+basic.forever(function () {
+    if (XRBIT.irremote_on_pressed(XRBIT.IRValue.Num0)) {
+        basic.showNumber(0)
+    }
+    if (XRBIT.irremote_on_pressed(XRBIT.IRValue.Num1)) {
+        basic.showNumber(1)
+    }
+    if (XRBIT.irremote_on_pressed(XRBIT.IRValue.Num2)) {
+        basic.showNumber(2)
+    }
+    if (XRBIT.irremote_on_pressed(XRBIT.IRValue.Play)) {
+        basic.showString("P")
+    }
+})

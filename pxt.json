@@ -6,7 +6,8 @@
         "radio": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
         "XRBIT": "github:xiaorgeek/xrbit#ff8cc28ab3ca1ee81f9bc7543591de59dbd34b8f",
-        "XRBIT-ds_ownTest": "github:szucskar/xrbit-ds_en#70c6562c7a5ac39771157cb998e9f7fdd54934eb"
+        "XRBIT-ds_ownTest": "github:szucskar/xrbit-ds_en#70c6562c7a5ac39771157cb998e9f7fdd54934eb",
+        "microphone": "*"
     },
     "files": [
         "main.blocks",
@@ -16,6 +17,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "7.0.57",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
