@@ -1,6 +1,13 @@
 input.onButtonPressed(Button.A, function () {
     XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.fwd_100)
     XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.fwd_100)
+    basic.showLeds(`
+        . . # . .
+        . . . # .
+        . . . . #
+        . . . # .
+        . . # . .
+        `)
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "f") {
@@ -47,6 +54,13 @@ radio.onReceivedString(function (receivedString) {
 input.onButtonPressed(Button.B, function () {
     XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.stop)
     XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.stop)
+    basic.showLeds(`
+        . . # . .
+        . # . . .
+        # . . . .
+        . # . . .
+        . . # . .
+        `)
 })
 namespace XRbit_sensor {
 
