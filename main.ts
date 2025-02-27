@@ -1,3 +1,53 @@
+input.onButtonPressed(Button.A, function () {
+    XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.fwd_100)
+    XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.fwd_100)
+})
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "f") {
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            . . . . #
+            . . . # .
+            . . # . .
+            `)
+        XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.fwd_50)
+        XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.fwd_50)
+    }
+    if (receivedString == "b") {
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # . . . .
+            . # . . .
+            . . # . .
+            `)
+        XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.stop)
+        XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.stop)
+    }
+    if (receivedString == "r") {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            # . . . #
+            . # . # .
+            . . # . .
+            `)
+    }
+    if (receivedString == "l") {
+        basic.showLeds(`
+            . . # . .
+            . # . # .
+            # . . . #
+            . . . . .
+            . . . . .
+            `)
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.stop)
+    XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.stop)
+})
 namespace XRbit_sensor {
 
     export enum enVoice {
@@ -256,6 +306,7 @@ namespace XRbit_Trolley {
         return irread;
     }
 }
+radio.setGroup(1)
 basic.showString("GO")
 basic.forever(function () {
     if (XRBIT.irremote_on_pressed(XRBIT.IRValue.Num0)) {
