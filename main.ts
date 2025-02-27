@@ -1,6 +1,4 @@
 input.onButtonPressed(Button.A, function () {
-    XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.fwd_100)
-    XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.fwd_100)
     basic.showLeds(`
         . . # . .
         . . . # .
@@ -8,6 +6,8 @@ input.onButtonPressed(Button.A, function () {
         . . . # .
         . . # . .
         `)
+    XRbit_Trolley.SetMotor(XRbit_Trolley.enMotor.leftMotor, 54)
+    XRbit_Trolley.SetMotor(XRbit_Trolley.enMotor.rightMotor, 52)
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "f") {
@@ -52,8 +52,6 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    XRBIT.SetMotor(XRBIT.motor.M1, XRBIT.speed.stop)
-    XRBIT.SetMotor(XRBIT.motor.M2, XRBIT.speed.stop)
     basic.showLeds(`
         . . # . .
         . # . . .
@@ -61,6 +59,8 @@ input.onButtonPressed(Button.B, function () {
         . # . . .
         . . # . .
         `)
+    XRbit_Trolley.SetMotor(XRbit_Trolley.enMotor.leftMotor, 0)
+    XRbit_Trolley.SetMotor(XRbit_Trolley.enMotor.rightMotor, 0)
 })
 namespace XRbit_sensor {
 
